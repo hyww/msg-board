@@ -1,19 +1,33 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Msg from './Msg.js';
 
 class App extends Component {
+  constructor(){
+    super();
+    this.state={
+      data: [
+        {
+          time: 1494354687000,
+          text: 'Hello Root!',
+          user: 'test',
+          children: [1],
+        },
+        {
+          time: 1494354687000,
+          text: 'Hello World!',
+          user: 'test',
+          children: [],
+        },
+      ]
+    }
+  }
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      <Msg
+        id={0}
+        data={this.state.data}
+      ></Msg>
     );
   }
 }
