@@ -36,6 +36,7 @@ class App extends Component {
     e.target.previousSibling.value="";
     fetch(server+'/api/comments', {
       method: 'POST',
+      credentials: 'include',
       headers: {
         'Content-Type': 'application/json'
       },

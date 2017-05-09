@@ -10,6 +10,7 @@ const Msg = (props)=>{
       <div className="msg">
         <div
           className="text"
+          style={{backgroundColor:msg.color}}
           dangerouslySetInnerHTML={{__html: markdown.toHTML(msg.text)}}
         ></div>
         <span className="time">{(new Date(msg.time)).toLocaleString("zh-tw", {timeZone:'Asia/Taipei'})}</span>

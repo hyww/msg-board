@@ -7,8 +7,7 @@
 .text{
   margin-top: 20px;
   font-size: large;
-  border: 1px solid grey;
-  border-radius: 5px;
+  border-radius: 10px;
   padding: 5px;
 }
 .time{
@@ -31,7 +30,7 @@ textarea{
   resize: none; 
   width: 60%;
   font-size: large;
-  border-radius: 5px;
+  border-radius: 10px;
   margin-top: 10px;
 }
 .board{
