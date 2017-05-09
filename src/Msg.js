@@ -19,6 +19,7 @@ const Msg = (props)=>{
           id={i}
           key={i}
           data={props.data}
+          handler={props.handler}
         ></Msg>
     )
   });
@@ -31,6 +32,10 @@ const Msg = (props)=>{
       <Textbox
         id={id}
       ></Textbox>
+      <button
+        data-id={id}
+        onClick={props.handler}
+      >Submit</button>
     </div>
   );
 }
