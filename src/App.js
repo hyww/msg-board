@@ -46,7 +46,6 @@ class App extends Component {
   load() {
     fetch(server+'/api/comments')
       .then(res=>{
-        console.log(res);
         if (!res.ok)
           throw res.status;
         return res.json();

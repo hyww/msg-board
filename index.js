@@ -39,7 +39,7 @@ app.get('/api/comments', (req, res) => {
 app.post('/api/comments', (req, res) => {
   if(!req.body.text) {
     res.status(400).send('Bad request.');
-    console.log('Bad request.');
+    console.log('Bad request.', res.body);
   }
   else {
     const msg = {
@@ -50,7 +50,6 @@ app.post('/api/comments', (req, res) => {
     }
     data[req.body.parent_id].children.push(data.length);
     data.push(msg);
-    console.log(data);
     res.send('hi');
   }
 });
