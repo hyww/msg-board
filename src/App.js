@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Msg from './Msg.js';
-const server = 'http://localhost:5000';
+const server = process.env.PUBLIC_URL;
 
 class App extends Component {
   constructor(){
