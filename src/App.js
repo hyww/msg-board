@@ -17,11 +17,14 @@ class App extends Component {
   }
   render() {
     return (
-      <Msg
-        id={0}
-        data={this.state.data}
-        handler={this.onClick}
-      ></Msg>
+      <div className="board">
+        <h1>Message Board</h1>
+        <Msg
+          id={0}
+          data={this.state.data}
+          handler={this.onClick}
+        ></Msg>
+      </div>
     );
   }
   onClick(e) {
@@ -29,8 +32,8 @@ class App extends Component {
     const body = {
       parent_id: id,
       text: e.target.previousSibling.value,
-      user: 'u'
     }
+    e.target.previousSibling.value="";
     fetch(server+'/api/comments', {
       method: 'POST',
       headers: {
