@@ -9,6 +9,7 @@
   font-size: large;
   border-radius: 10px;
   padding: 5px;
+  word-wrap: break-word;
 }
 .time{
   font-size: small;
